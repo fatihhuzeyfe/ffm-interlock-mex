@@ -26,7 +26,7 @@ curve of the interface length scale* l<sub>ch</sub>/w.
 ## Contents
 
 1. [What the code does](#what-the-code-does)
-2. [Installation check (2 minutes, no Abaqus)](#installation-check-2-minutes-no-abaqus)
+2. [Checking the installation](#checking-the-installation)
 3. [Reproducing the paper](#reproducing-the-paper)
 4. [Running your own geometry or material](#running-your-own-geometry-or-material)
 5. [Repository layout](#repository-layout)
@@ -75,7 +75,10 @@ be evaluated in minutes from one set of Abaqus runs.
 
 ---
 
-## Installation check (2 minutes, no Abaqus)
+## Checking the installation
+
+The following commands install the Python part and check it with the unit tests and the Griffith
+benchmark of the FFM chain:
 
 ```bash
 git clone https://github.com/fatihhuzeyfe/ffm-interlock-mex.git
@@ -192,7 +195,7 @@ button uses [`CITATION.cff`](CITATION.cff).
 
 ```bibtex
 @article{ozturk2026ffm,
-  author  = {{\"O}zt{\"u}rk, Fatih Huzeyfe},
+  author  = {{Öztürk, Fatih Huzeyfe},
   title   = {Crack onset at mechanically interlocked multi-material interfaces in material
              extrusion: a finite fracture mechanics master curve},
   journal = {Extreme Mechanics Letters},
@@ -201,7 +204,7 @@ button uses [`CITATION.cff`](CITATION.cff).
 }
 ```
 
-* Code: MIT license ([`LICENSE`](LICENSE)). Onset predictions in `data/`: CC BY 4.0 ([`LICENSE-DATA`](LICENSE-DATA)).
+* Code: MIT license ([`LICENSE`](LICENSE)). Onset predictions in `data/`: CC BY 4.0 ([`data/LICENSE`](data/LICENSE)).
 * Material data sources and other credits: [`CREDITS.md`](CREDITS.md).
 * **Use of AI.** The code, the figures and the documentation of this repository were developed
   with the assistance of Claude (Anthropic). All simulations were run and all results were
@@ -209,3 +212,4 @@ button uses [`CITATION.cff`](CITATION.cff).
 
 Contact: Fatih Huzeyfe Öztürk, Department of Mechanical Engineering, Karabük University,
 Türkiye (fhozturk@karabuk.edu.tr).
+
