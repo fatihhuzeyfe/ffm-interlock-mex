@@ -1,0 +1,127 @@
+{
+ "runs_dir": "runs_fine",
+ "plane": "strain",
+ "nominal_strain": 0.001,
+ "mesh": {
+  "h_global": 0.5,
+  "h_line": 0.025,
+  "n_per_edge": 8
+ },
+ "da": {
+  "n": 12,
+  "min": 0.005,
+  "max": 0.5,
+  "extend": true,
+  "max_ext": 2.0
+ },
+ "geometry_defaults": {
+  "pitch": 4.0,
+  "H": 8.0,
+  "n_features": 1,
+  "head_ratio": 2.0,
+  "neck_frac": 0.5
+ },
+ "bulk_offsets_deg": [
+  -30,
+  0,
+  30
+ ],
+ "symmetry_prune_for_tension": true,
+ "shapes": [
+  {
+   "shape": "flat"
+  },
+  {
+   "shape": "U",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ]
+  },
+  {
+   "shape": "T",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ]
+  },
+  {
+   "shape": "dovetail",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "alpha_deg": [
+    10,
+    20,
+    30
+   ]
+  },
+  {
+   "shape": "sine",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "PLA",
+   "PETG"
+  ],
+  [
+   "PLA",
+   "ABS"
+  ],
+  [
+   "PETG",
+   "ABS"
+  ]
+ ],
+ "loads": [
+  "tension",
+  "shear"
+ ],
+ "post": {
+  "k_sigma": [
+   0.1,
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "k_G": [
+   0.1,
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "feature_width_mm": [
+   2.0,
+   5.0,
+   10.0
+  ],
+  "GIIc_over_GIc": [
+   1.0,
+   2.0,
+   4.0
+  ]
+ },
+ "material_model": "orthotropic",
+ "raster_deg": [
+  0,
+  90
+ ],
+ "_notes": "Mesh convergence copy of study.json (D3): h_line halved, n_per_edge doubled, separate runs_fine folder.",
+ "lateral": "periodic"
+}

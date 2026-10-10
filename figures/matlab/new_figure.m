@@ -1,0 +1,6 @@
+function fig = new_figure(w, h)
+%NEW_FIGURE  Figure of w x h centimetres (also the printed size of the EPS).
+fig = figure('Units', 'centimeters', 'Position', [1 1 w h], 'Color', 'w', ...
+             'PaperUnits', 'centimeters', 'PaperSize', [w h], 'PaperPosition', [0 0 w h], ...
+             'InvertHardcopy', 'off');
+end

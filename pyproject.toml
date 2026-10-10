@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffm-interlock-mex"
+version = "1.0.0"
+description = "Finite fracture mechanics of mechanically interlocked multi-material interfaces (material extrusion)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Fatih Huzeyfe Ozturk", email = "fhozturk@karabuk.edu.tr"}]
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.8",
+    "pandas>=1.4",
+    "matplotlib>=3.5",
+    "scikit-learn>=1.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["ffm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

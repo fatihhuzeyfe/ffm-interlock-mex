@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the article below."
+title: "ffm-interlock-mex: finite fracture mechanics of interlocked multi-material interfaces"
+type: software
+authors:
+  - family-names: "Öztürk"
+    given-names: "Fatih Huzeyfe"
+    affiliation: "Department of Mechanical Engineering, Karabük University"
+    email: "fhozturk@karabuk.edu.tr"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/fatihhuzeyfe/ffm-interlock-mex"
+keywords:
+  - finite fracture mechanics
+  - coupled criterion
+  - interlocking
+  - multi-material additive manufacturing
+  - Abaqus
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Öztürk"
+      given-names: "Fatih Huzeyfe"
+  title: "Crack onset at mechanically interlocked multi-material interfaces in material extrusion: a finite fracture mechanics master curve"
+  journal: "Extreme Mechanics Letters"
+  year: 2026
+  notes: "submitted"

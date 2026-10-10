@@ -1,0 +1,139 @@
+{
+ "runs_dir": "runs",
+ "plane": "strain",
+ "nominal_strain": 0.001,
+ "mesh": {
+  "h_global": 0.5,
+  "h_line": 0.05,
+  "n_per_edge": 4
+ },
+ "da": {
+  "n": 12,
+  "min": 0.005,
+  "max": 0.5,
+  "extend": true,
+  "max_ext": 4.0,
+  "max_ext_bulk": 2.0
+ },
+ "geometry_defaults": {
+  "pitch": 4.0,
+  "H": 8.0,
+  "n_features": 1,
+  "head_ratio": 2.0,
+  "neck_frac": 0.5
+ },
+ "bulk_offsets_deg": [
+  -30,
+  0,
+  30
+ ],
+ "symmetry_prune_for_tension": true,
+ "shapes": [
+  {
+   "shape": "flat"
+  },
+  {
+   "shape": "U",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ]
+  },
+  {
+   "shape": "T",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ]
+  },
+  {
+   "shape": "dovetail",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "alpha_deg": [
+    10,
+    20,
+    30
+   ]
+  },
+  {
+   "shape": "sine",
+   "ar": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "PLA",
+   "PETG"
+  ],
+  [
+   "PLA",
+   "ABS"
+  ],
+  [
+   "PETG",
+   "ABS"
+  ]
+ ],
+ "loads": [
+  "tension",
+  "shear"
+ ],
+ "post": {
+  "k_sigma": [
+   0.1,
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "k_G": [
+   0.1,
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "feature_width_mm": [
+   2.0,
+   5.0,
+   10.0
+  ],
+  "GIIc_over_GIc": [
+   1.0,
+   2.0,
+   4.0
+  ]
+ },
+ "material_model": "orthotropic",
+ "raster_deg": [
+  0,
+  90
+ ],
+ "_notes": "raster_deg: road direction of BOTH materials in the layer plane (0 = parallel to the mean interface, 90 = perpendicular). material_model 'isotropic' reproduces the v1 model. da.extend: paths run to the next corner (max max_ext) for the propagation / stability analysis. lateral: 'periodic' = interior cell of a periodic array (no free edges, left/right edges tied with equations incl. free macroscopic dofs); 'free' = single-feature specimen with free sides.",
+ "lateral": "periodic",
+ "crack_contact": {
+  "loads": [
+   "shear"
+  ],
+  "shapes": [
+   "sine",
+   "U"
+  ],
+  "_notes": "frictionless contact on the crack faces for curved interfaces (sine, U) in shear. FROZEN: no further model changes; remaining overlaps (e.g. long U-arc cracks in tension) are flagged in post-processing."
+ },
+ "_version": "v2-final (frozen)"
+}
