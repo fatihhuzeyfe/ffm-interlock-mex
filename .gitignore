@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+# finite element output (large; regenerated with the scripts)
+runs/
+runs_fine/
+runs_mesh_coarse/
+runs_czm/
+results/
+results_fine/
+results_mesh_coarse/
+results_czm/
+*.odb
+*.cae
+*.jnl
+*.rpy*
+*.rec
+*.lck
+work_s*/
+# generated figure data and figures
+figures/data/
+figures/output/
+figures/output_matlab/
+published/
